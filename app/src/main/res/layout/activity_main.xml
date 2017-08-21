@@ -25,10 +25,20 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.mindorks.tensorflowexample.MainActivity">
 
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_gravity="center|top"
+        android:src="@drawable/deakin"
+         />
+
+
     <com.flurgle.camerakit.CameraView
         android:id="@+id/cameraView"
         android:layout_width="300dp"
-        android:layout_height="300dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="100dp"
         android:layout_gravity="center|top" />
 
 

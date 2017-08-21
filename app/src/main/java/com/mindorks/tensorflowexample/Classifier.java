@@ -37,7 +37,7 @@ public interface Classifier {
          * A unique identifier for what has been recognized. Specific to the class, not the instance of
          * the object.
          */
-        private final String id;
+        private final int id;
 
         /**
          * Display name for the recognition.
@@ -55,14 +55,17 @@ public interface Classifier {
         private RectF location;
 
         public Recognition(
-                final String id, final String title, final Float confidence, final RectF location) {
+                final int id, final String title, final Float confidence, final RectF location) {
             this.id = id;
             this.title = title;
             this.confidence = confidence;
             this.location = location;
         }
 
-        public String getId() {
+
+
+
+        public int getId() {
             return id;
         }
 
@@ -85,21 +88,47 @@ public interface Classifier {
         @Override
         public String toString() {
             String resultString = "";
-            if (id != null) {
-                resultString += "[" + id + "] ";
-            }
+           if (id == 631 && title != null ) {
+             //  resultString += "[" + id + "]";
+               resultString +=  "grasshopper";
 
-            if (title != null) {
-                resultString += title + " ";
-            }
+           }
 
-            if (confidence != null) {
-                resultString += String.format("(%.1f%%) ", confidence * 100.0f);
-            }
 
-            if (location != null) {
-                resultString += location + " ";
-            }
+         else if (title != null && id == 224) {
+              resultString += title + "";
+             //  resultString += "[" + id + "]";
+          }
+
+           else if (title != null && id == 622) {
+               resultString +=  "ladybug";
+             //  resultString += "[" + id + "]";
+           }
+
+           else if (title != null && id == 630) {
+               resultString += title + "";
+            //   resultString += "[" + id + "]";
+           }
+
+
+
+
+          // else if (confidence != null) {
+         //       resultString += String.format("(%.1f%%) ", confidence * 100.0f);
+         //   }
+
+        //   else if (location != null) {
+         //       resultString += location + " ";
+         //   }
+         //  else if (id ==632 && title!=null)
+          //  {
+          //      resultString += title + "Not Ant";
+          //  }
+
+          else
+          {
+              resultString += "Not Bug";
+          }
 
             return resultString.trim();
         }
