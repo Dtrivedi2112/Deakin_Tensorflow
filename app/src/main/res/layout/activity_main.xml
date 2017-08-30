@@ -48,7 +48,10 @@
         android:layout_gravity="center|top"
         android:layout_marginTop="300dp"
         android:gravity="center"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:visibility="visible">
+
+
 
         <ImageView
             android:id="@+id/imageViewResult"
@@ -61,9 +64,9 @@
             android:layout_width="match_parent"
             android:layout_height="80dp"
             android:fadeScrollbars="false"
+            android:gravity="center"
             android:maxLines="15"
             android:scrollbars="vertical"
-            android:gravity="center"
             android:textColor="@android:color/black" />
 
     </LinearLayout>

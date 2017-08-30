@@ -1,52 +1,86 @@
 # Android TensorFlow Machine Learning Example
-[![Mindorks](https://img.shields.io/badge/mindorks-opensource-blue.svg)](https://mindorks.com/open-source-projects)
-[![Mindorks Community](https://img.shields.io/badge/join-community-blue.svg)](https://mindorks.com/join-community)
-[![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=102)](https://opensource.org/licenses/Apache-2.0)
-[![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](https://github.com/amitshekhariitbhu/AndroidTensorFlowMachineLearningExample/blob/master/LICENSE)
 
-<img src=https://raw.githubusercontent.com/MindorksOpenSource/AndroidTensorFlowMachineLearningExample/master/assets/ml_android.png >
 
-##  About Android TensorFlow Machine Learning Example
-* This is an example project for integrating [TensorFlow](https://github.com/tensorflow/tensorflow) into Android application
-* How to build TensorFlow project to use with Android project.
-* How to build TensorFlow library(.so file and jar file) to use with Android Application.
-* This project include an example for object detection for an image taken from camera using TensorFlow library.
+--------------------------------------------------------------------------------------------------------------------------------------------------
 
-# [Read this article. It describes everything about building TensorFlow for Android.](https://blog.mindorks.com/android-tensorflow-machine-learning-example-ff0e9b2654cc)
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/MindorksOpenSource/AndroidTensorFlowMachineLearningExample/master/assets/keyboard_example.png" width="250">
-  <img src="https://raw.githubusercontent.com/MindorksOpenSource/AndroidTensorFlowMachineLearningExample/master/assets/pen_example.png" width="250">
-  <img src="https://raw.githubusercontent.com/MindorksOpenSource/AndroidTensorFlowMachineLearningExample/master/assets/wallet_example.png" width="250">
-</p>
-<img src=https://raw.githubusercontent.com/MindorksOpenSource/AndroidTensorFlowMachineLearningExample/master/assets/sample_combined.png >
-<br>
-<br>
+Name: Evaluate the Android tensorflow  Machine Learning app
+ 
+Date Started: 03/08/17
+ 
+Using:
+Java
+Android Studio
+ 
+Why?
+To check the extent of android tensorflow machine learning app and see if it works for a particular class.
+ 
+How?
+Fork the github repository.
+Link - https://github.com/MindorksOpenSource/AndroidTensorFlowMachineLearningExample
+Clone it.
+Build it on Android studio.
+Run it on mobile. 
+Testing by focusing it on various objects based on their shapes, drawings and also check for a specific class.
+ 
+Outcome
+ It detects the classes as specified in the inception model but it contains a camera button so one has to take picture to detect the object which is good but live tracking is better which is provided in the original tensorflow app. The reason it is better because in this app when taking pictures from different angles it changes the result every time.
 
-### Find this project useful ? :heart:
-* Support it by clicking the :star: button on the upper right of this page. :v:
+The camera does not optimize automatically so one has to open an image to full screen to it’s best quality so it can be detected other detection process is working fine.
+ 
+Date Completed:  08/08/2017
+ 
+What?
+The camera does not detect the objects properly as the image should be it’s best quality so it can detect otherwise it won’t because the camera doesn’t optimize automatically so it will get blur as one moves closer to the image.
 
-### Credits
-* The classifier example has been taken from Google TensorFlow example.
+It won’t detect an object if it’s in a group.
 
-[Check out Mindorks awesome open source projects here](https://mindorks.com/open-source-projects)
+As it has capture button so one has to take photos from different angles to detect the object because sometimes it doesn’t detect so one has to try it several times.
+ 
+Notes:
+Better open an image to full screen to it’s best quality so it can detect properly.
 
-### License
-```
-   Copyright (C) 2017 MINDORKS NEXTGEN PRIVATE LIMITED
+To build the original tensorflow app because when creating the dataset it will be helpful to find all the files related to it rather than finding manually over here which is confusing. 
+ 
+Recommendation:
 
-   Licensed under the Apache License, Version 2.0 (the "License");
-   you may not use this file except in compliance with the License.
-   You may obtain a copy of the License at
+Build tensorflow on ubuntu.
+Might need to edit some changes in the camera for better optimization.
+Test for detecting Ant class.
 
-       http://www.apache.org/licenses/LICENSE-2.0
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-   Unless required by applicable law or agreed to in writing, software
-   distributed under the License is distributed on an "AS IS" BASIS,
-   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-   See the License for the specific language governing permissions and
-   limitations under the License.
-```
 
-### Contributing to Android TensorFlow Machine Learning Example
-Just make pull request. You are in!
+Name: Evaluate the Android tensorflow machine learning app for Ant class. 
+Date Started: 05/08/17
+ 
+Using:
+Java
+Android Studio
+ 
+Why?
+To check the extent of identifying one particular class and also observe the confidence score based on that.
+ 
+How?
+By making some  class changes in the label file so that it detects only ants and detecting other objects should result in “Not ant”.
+Open filename “imagenet_comp_graph_label_strings.txt” and edit all the 1000 classes to “ Not Ant” and don’t edit the class name “Ant” and leave it as it is.
+Build it.
+Test it on different ant images.
+ 
+Outcome
+The results are good but as said in last spike, the image quality should be best to get accurate results.
+It can’t detects group of ants.
+Need to take photos from different angles to get the exact result.
+ 
+Date Completed:  08/08/2017
+ 
+What?:
+This app detects only ants and the confidence score for it is changing if picture is taken from different angle.
+Group of objects isn’t recognized by this app.
+ 
+Notes:
+Open the image in full screen to get accurate data. 
+
+ 
+Recommendation:
+Maybe train the model by giving some images of ants after optimizing the camera.

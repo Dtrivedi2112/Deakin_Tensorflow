@@ -73,7 +73,8 @@ public interface Classifier {
             return title;
         }
 
-        public Float getConfidence() {
+        public Float getConfidence()
+        {
             return confidence;
         }
 
@@ -87,26 +88,38 @@ public interface Classifier {
 
         @Override
         public String toString() {
+
+
+
+
             String resultString = "";
            if (id == 631 && title != null ) {
-             //  resultString += "[" + id + "]";
-               resultString +=  "grasshopper";
+
+              //resultString += "[" + id + "]";
+               resultString +=  "grasshopper,蚱蜢,sauterelle,Heuschrecke";
+
+
+
+               resultString += String.format("(%.1f%%) ", confidence * 100.0f);
 
            }
 
 
          else if (title != null && id == 224) {
               resultString += title + "";
-             //  resultString += "[" + id + "]";
+               resultString += String.format("(%.1f%%) ", confidence * 100.0f);
+             // resultString += "[" + id + "]";
           }
 
            else if (title != null && id == 622) {
                resultString +=  "ladybug";
+               resultString += String.format("(%.1f%%) ", confidence * 100.0f);
              //  resultString += "[" + id + "]";
            }
 
            else if (title != null && id == 630) {
                resultString += title + "";
+               resultString += String.format("(%.1f%%) ", confidence * 100.0f);
             //   resultString += "[" + id + "]";
            }
 
